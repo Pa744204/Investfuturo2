@@ -1,40 +1,32 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Investfuturo</title>
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Investfuturo</h1>
-    <nav>
-      <a href="#inicio">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
+  <h1>Bem-vindo ao Investfuturo</h1>
+  <p>Faça seus investimentos de forma segura.</p>
 
-  <section id="inicio">
-    <h2>Bem-vindo</h2>
-    <p>Seu portal para aprender a investir com moedas tradicionais.</p>
-  </section>
+  <script type="module">
+    // Firebase SDKs
+    import {{ initializeApp }} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    import {{ getAnalytics }} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
 
-  <section id="sobre">
-    <h2>Sobre</h2>
-    <p>O Investfuturo é um projeto para ajudar iniciantes no mundo dos investimentos.</p>
-  </section>
+    const firebaseConfig = {{
+      apiKey: "AIzaSyBfuvxPauL6wzUCNyxNWmgjz4s9OjYkdAs",
+      authDomain: "investuro2.firebaseapp.com",
+      projectId: "investuro2",
+      storageBucket: "investuro2.firebasestorage.app",
+      messagingSenderId: "780990406575",
+      appId: "1:780990406575:web:e858bd77ec6b786da7195a",
+      measurementId: "G-RNV1VF544Q"
+    }};
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Entre em contato: contato@investfuturo.com</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Investfuturo</p>
-  </footer>
-
-  <script src="script.js"></script>
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </body>
 </html>
